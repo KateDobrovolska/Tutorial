@@ -35,4 +35,3 @@
 # price = float(input('Fuel price'))
 # bill = f'Your bill {volume * price} uah'
 # print(bill)
-
