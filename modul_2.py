@@ -191,14 +191,14 @@
 # де а, x, r — цілі числа.
 # Оператори continue та break працюють тільки всередині одного циклу. В ситуації вкладених циклів немає способу вийти з усіх циклів одразу.
 #
-while True:
-    number = input("number = ")
-    number = int(number)
-    while True:
-        print(number)
-        number = number - 1
-        if number < 0:
-            break
+# while True:
+#     number = input("number = ")
+#     number = int(number)
+#     while True:
+#         print(number)
+#         number = number - 1
+#         if number < 0:
+#             break
 
 # В цьому прикладі користувач вводить число та отримує зворотний відлік від цього числа до 0 в консолі. При цьому, зовнішній нескінченний цикл жодним чином не перервати і break вийде тільки з внутрішнього циклу.
 #----------------------------------
@@ -207,3 +207,45 @@ while True:
 # if number < 0:
 #     break  #Такий код призводить до помилки SyntaxError. Такі помилки називаються виключеннями.
 
+#============================================================
+#------------------EXAMPLES----------------------------------
+#=================== WHILE LOOP ===============================
+# while True:
+#     user_input = input('>>> ')
+#     if user_input == 'exit':
+#         break
+#     else:
+#         print(f'You write: {user_input}')
+#=============================================================
+# counter = 0
+# while True:
+#     user_input = input('>>> ')
+#     counter +=1 #counter = counter + 1
+#     if user_input == 'exit'or counter >=5:
+#         break
+#     else:
+#         print(f'You write: {user_input}')
+#---------- OR ----------------Прироботі з циклом думайте над логікою виходу 
+# counter = 0
+# while counter < 5:
+#     user_input = input('>>> ')
+#     counter +=1 #counter = counter + 1
+#     if user_input == 'exit':
+#         break
+#     else:
+#         print(f'You write: {user_input}')
+#================================================================
+while True:
+    age = input("How old are you?")
+    try: # (try and exept - за їх допомогою можемо вибирати валідні дані) як помилку перетворити в додаткове питання, якщо вік ввести буквами
+        age = int(age) #перетворення типів 
+        if age >= 18:
+            print("Access allowed")
+            break
+        else:
+            print("Access denied")
+            break
+    except ValueError: 
+        print(f'{age} is not a number. Please write a number!')
+    finally:
+        print('-'*30) # сепаратер 
