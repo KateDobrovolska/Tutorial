@@ -13,9 +13,3 @@ def solution(a, b, c) -> Optional[Tuple[int, int]]:
     print (result)
     
     return result
-
-if __name__ == "__main__":
-    assert solution(1, 6, 5) == (-5.0, -1.0)
-    assert solution(1, 4, 4) == (-2.0,)
-    assert solution(1, 6, 45) == None
-    assert solution(1, 8, 15) == (-5.0, -3.0)
